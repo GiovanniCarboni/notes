@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Crafty Girls;
+  src: url(../fonts/crafty-girls-v16-latin-regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: Crafty Girls, serif;
+  color: rgb(44, 44, 44);
+}
+
+input {
+  color: inherit;
+}

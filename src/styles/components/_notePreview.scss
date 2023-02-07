@@ -1,3 +1,5 @@
+@use "./../color";
+
 .note-preview {
   padding: 0.8rem;
   border: 1px solid rgb(177, 176, 176);
@@ -5,6 +7,7 @@
   cursor: pointer;
   margin-bottom: 5px;
   position: relative;
+  background: #fff;
 
   &__header {
     display: flex;
@@ -17,13 +20,14 @@
 
   &:hover,
   .note-preview--selected {
-    background-color: lightgray;
+    // background-color: lightgray;
+    background-color: lighten($color: color.$accent-light, $amount: 25%);
     &::after {
       position: absolute;
       bottom: -1px;
       right: -1px;
       content: "";
-      border-bottom: 20px solid white;
+      border-bottom: 20px solid color.$background;
       border-left: 20px solid rgb(163, 163, 163);
     }
   }

@@ -1,25 +1,35 @@
+@use "./../color";
+
 .notes-list {
   max-width: 25rem;
   min-width: 20rem;
   width: 30%;
+  background: #fff;
   position: relative;
   transition: transform 0.2s ease-in-out;
   box-shadow: 2px 0 5px gray;
   z-index: 5;
   padding: 0.1rem;
   &__toggle-btn {
-    font-size: 2rem;
-    background: #fff;
+    background: color.$background;
     border-radius: 0 2px 2px 0;
     border: none;
     box-shadow: 0 2px 2px gray, 2px 0 2px gray;
     border-left: none;
-    padding: 0rem 0.74rem;
+    padding: 0.6rem 0.6rem;
     position: absolute;
     top: 0.8rem;
-    right: -2.25rem;
+    right: -3.2rem;
     z-index: 15;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    div {
+      height: 2px;
+      width: 2rem;
+      background: color.$font-color;
+    }
   }
   &__add-container {
     display: flex;
@@ -29,15 +39,26 @@
     box-shadow: 0 2px 3px gray;
     z-index: 10;
     padding: 2rem;
+    background: color.$secondary;
     button {
-      border-radius: 50%;
+      border-radius: 0.4rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: inherit;
+      border: none;
+      padding: 0.4rem 1.5rem;
+      &:hover {
+        outline: 3px solid color.$primary;
+        // color: #fff;
+      }
     }
   }
   &__list-container {
     z-index: 10;
-    height: 90%;
+    height: 92.8%;
     overflow-y: scroll;
-    padding: 0.8rem;
+    padding: 0.4rem;
+    background: color.$background;
     &::-webkit-scrollbar-thumb {
       background: rgb(152, 152, 152);
     }

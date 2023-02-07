@@ -1,3 +1,5 @@
+@use "./../color";
+
 .note-container {
   display: flex;
   justify-content: center;
@@ -22,6 +24,20 @@
     padding: 1rem;
     padding-top: 0;
     margin-bottom: 1rem;
+    .button {
+      background-color: darken(color.$background, 10%);
+      border: none;
+      padding: 10px 15px;
+      transition: 0.05s;
+      font-weight: bold;
+      &:hover {
+        outline: 3px solid color.$accent-dark;
+      }
+      &:active {
+        outline: 3px solid color.$accent-dark;
+        background: #fff;
+      }
+    }
   }
   &__header {
     display: flex;

@@ -27,7 +27,7 @@ export default function NotesList({ notes }) {
               setListOpen(false);
             }}
           >
-            +
+            + Add a note
           </button>
         </div>
         <div className="notes-list__list-container">
@@ -39,7 +39,9 @@ export default function NotesList({ notes }) {
           className="notes-list__toggle-btn"
           onClick={handleToggleNotesList}
         >
-          &times;
+          <div></div>
+          <div></div>
+          <div></div>
         </button>
       </div>
     </>
