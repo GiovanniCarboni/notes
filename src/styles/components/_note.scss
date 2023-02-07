@@ -1,0 +1,75 @@
+.note-container {
+  display: flex;
+  justify-content: center;
+  background: lightgray;
+  height: 100%;
+  // overflow-y: scroll;
+}
+
+.note {
+  box-shadow: 2px 0px 5px gray, -2px 0 5px gray;
+  background: #fff;
+  padding: 2rem;
+  max-width: 800px;
+  height: 100%;
+  &__content {
+    // background: yellow;
+  }
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 1rem;
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+  &__header {
+    display: flex;
+    font-style: italic;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+    input {
+      height: 3rem;
+      width: 80%;
+      font-weight: bold;
+      font-size: 2rem;
+      border: none;
+      font-style: italic;
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+    height: 70vh;
+    text-align: justify;
+    word-break: normal;
+    font-size: 1.2rem;
+    resize: none;
+    border: none;
+    padding: 0.5rem;
+
+    // draw rows in textarea
+    background-attachment: local;
+    background-image: linear-gradient(to right, white 10px, transparent 10px),
+      linear-gradient(to left, white 10px, transparent 10px),
+      repeating-linear-gradient(
+        white,
+        white 32px,
+        lightgray 32px,
+        lightgray 33px,
+        white 32px
+      );
+    line-height: 33px;
+    padding: 8px 10px;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}

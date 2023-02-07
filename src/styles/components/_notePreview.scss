@@ -1,0 +1,30 @@
+.note-preview {
+  padding: 0.8rem;
+  border: 1px solid rgb(177, 176, 176);
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 5px;
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgb(238, 238, 238);
+  }
+
+  &:hover,
+  .note-preview--selected {
+    background-color: lightgray;
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      content: "";
+      border-bottom: 20px solid white;
+      border-left: 20px solid rgb(163, 163, 163);
+    }
+  }
+}

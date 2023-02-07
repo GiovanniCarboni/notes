@@ -1,0 +1,58 @@
+@use "./components/header";
+@use "./components/notesList";
+@use "./components/note";
+@use "./components/notePreview";
+@use "./components/note-placeholder";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Crafty Girls;
+  src: url(../fonts/crafty-girls-v16-latin-regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: Crafty Girls, serif;
+}
+
+// layout
+.app-container {
+  // display: flex;
+  padding-top: 3.2rem;
+  height: 100vh;
+  .notes-list {
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    top: 3rem;
+  }
+}
+
+.button {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  &:hover,
+  &:active {
+    background: gray;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  // border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}

@@ -1,0 +1,15 @@
+.header {
+  background: rgb(85, 85, 85);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 15;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px gray;
+  color: lightgray;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
